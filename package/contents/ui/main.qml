@@ -23,8 +23,13 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 10
     switchHeight: Kirigami.Units.gridUnit * 8
 
-    toolTipMainText: i18n("Home Assistant")
-    toolTipSubText: {
+    // Plasma wraps the whole compact representation in a ToolTipArea showing these texts.
+    // With pinned entities that would cover each icon's own tooltip, so leave it empty
+    // and let the chevron show the widget tooltip instead (see CompactRepresentation).
+    toolTipMainText: panelEntities.length > 0 ? "" : i18n("Home Assistant")
+    toolTipSubText: panelEntities.length > 0 ? "" : statusText
+
+    readonly property string statusText: {
         if (!haClient.configured)
             return i18n("Not configured");
         switch (haClient.status) {

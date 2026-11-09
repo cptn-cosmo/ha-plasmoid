@@ -88,6 +88,16 @@ Item {
             Accessible.name: compact.plasmoidItem.expanded ? i18n("Hide Home Assistant entities") : i18n("Show Home Assistant entities")
             Accessible.onPressAction: compact.plasmoidItem.expanded = !compact.plasmoidItem.expanded
 
+            // The widget-level tooltip is disabled while entities are pinned (see main.qml),
+            // so the chevron carries it. Hover-only, clicks still reach the MouseArea.
+            PlasmaCore.ToolTipArea {
+                anchors.fill: parent
+                active: compact.hasPinned && !compact.plasmoidItem.expanded
+                mainText: i18n("Home Assistant")
+                subText: compact.plasmoidItem.statusText
+                location: Plasmoid.location
+            }
+
             Rectangle {
                 anchors.fill: parent
                 anchors.margins: Math.round(Kirigami.Units.smallSpacing / 2)
