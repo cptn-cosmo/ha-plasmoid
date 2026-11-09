@@ -24,8 +24,7 @@ depends=(
 makedepends=('gettext')
 optdepends=('qt6-tools: qdbus6, used to create the KWallet folder if it is missing')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/refs/tags/v$pkgver.tar.gz")
-# Placeholder: run `updpkgsums` once the v$pkgver tag is published.
-sha256sums=('SKIP')
+sha256sums=('0ae46acf4cfbdf814cfbec62e491ba79c4092dded23b1a018871c747f2108cd5')
 
 build() {
   cd "ha-plasmoid-$pkgver"
