@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <kcfgfile name=""/>
+
+  <group name="Connection">
+    <entry name="haUrl" type="String">
+      <label>Base URL of the Home Assistant instance, e.g. http://homeassistant.local:8123</label>
+      <default></default>
+    </entry>
+    <entry name="tokenStorage" type="String">
+      <label>Where the access token lives: "wallet" (KWallet) or "config" (plain-text fallback)</label>
+      <default>wallet</default>
+    </entry>
+    <entry name="tokenFallback" type="String">
+      <label>Plain-text access token, only used when KWallet is unavailable</label>
+      <default></default>
+    </entry>
+    <entry name="tokenRevision" type="Int">
+      <label>Bumped whenever the token in KWallet changes so the applet re-reads it</label>
+      <default>0</default>
+    </entry>
+    <entry name="pollInterval" type="Int">
+      <label>Polling interval in seconds while the WebSocket is disconnected</label>
+      <default>30</default>
+      <min>5</min>
+      <max>3600</max>
+    </entry>
+  </group>
+
+  <group name="Entities">
+    <entry name="entities" type="String">
+      <label>JSON array of selected entities: [{id, name, icon, placement}]</label>
+      <default>[]</default>
+    </entry>
+    <entry name="scrollStep" type="Int">
+      <label>Brightness change per mouse wheel step, in percent</label>
+      <default>5</default>
+      <min>1</min>
+      <max>50</max>
+    </entry>
+  </group>
+</kcfg>

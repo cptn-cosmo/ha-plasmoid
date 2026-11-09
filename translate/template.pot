@@ -1,0 +1,504 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the plasma_applet_io.github.cptn-cosmo.homeassistant package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_io.github.cptn-cosmo.homeassistant\n"
+"Report-Msgid-Bugs-To: https://github.com/cptn-cosmo/ha-plasmoid/issues\n"
+"POT-Creation-Date: 2026-11-09 16:14+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: package/contents/config/config.qml:6
+msgid "Connection"
+msgstr ""
+
+#: package/contents/config/config.qml:11
+msgid "Entities"
+msgstr ""
+
+#: package/contents/ui/CompactRepresentation.qml:88
+msgid "Hide Home Assistant entities"
+msgstr ""
+
+#: package/contents/ui/CompactRepresentation.qml:88
+msgid "Show Home Assistant entities"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:160
+msgid "Shown entities"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:168
+msgid "No entities selected yet. Tick entities in the list below to add them."
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:208
+msgid "Change icon of %1"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:209
+msgid "Change icon"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:233
+msgid "Display name"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:242
+msgid "(not found)"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:253
+msgid "Placement"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:255
+msgid "Panel and list"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:256
+msgid "Panel only"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:257
+msgid "List only"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:269
+msgid "Remove"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:289
+msgid "Available entities"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:293
+msgid "Reload"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:310
+msgid "Search by name or entity ID…"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:314
+msgid "Domain filter"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:315
+msgid "All domains"
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:324
+msgid ""
+"Set up the connection on the Connection page and click Apply, then come back "
+"here."
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:339
+msgid "Showing %1 of %2 matching entities. Refine the search to see more."
+msgstr ""
+
+#: package/contents/ui/configEntities.qml:340
+msgid "%1 matching entity"
+msgid_plural "%1 matching entities"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/configGeneral.qml:87
+msgid "This does not look like a long-lived access token."
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:122
+msgid "Home Assistant URL:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:136
+msgid "Access token:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:138
+msgid "Reading from KWallet…"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:138
+msgid "Long-lived access token"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:152
+msgid ""
+"Create one in Home Assistant under <i>Profile → Security → Long-lived access "
+"tokens</i>."
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:157
+msgid "Open Token Page"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:168
+msgid ""
+"KWallet is unavailable, so the token is stored in plain text in the Plasma "
+"configuration (~/.config/plasma-org.kde.plasma.desktop-appletsrc). %1"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:175
+msgid "Saving token to KWallet…"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:176
+msgid "The token will be saved to KWallet."
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:177
+msgid "The token is stored in KWallet."
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:183
+msgid "Connection:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:187
+msgid "Test Connection"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:194
+msgid "Connected: %1"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:217
+msgid "Fallback polling interval:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:222
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/configGeneral.qml:232
+msgid ""
+"Live updates use the WebSocket API. Polling is only used while that "
+"connection is down."
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:236
+msgid "Brightness per scroll step:"
+msgstr ""
+
+#: package/contents/ui/configGeneral.qml:241
+#, javascript-format
+msgctxt "percentage"
+msgid "%1%"
+msgstr ""
+
+#: package/contents/ui/EntityButton.qml:17
+#, javascript-format
+msgid "Brightness: %1%"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:41
+msgctxt "entity state"
+msgid "Loading…"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:43
+msgctxt "entity state"
+msgid "Not found"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:46
+msgctxt "entity state"
+msgid "Unavailable"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:47
+msgctxt "entity state"
+msgid "Unknown"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:49
+#, javascript-format
+msgctxt "entity state with brightness"
+msgid "On · %1%"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:49
+msgctxt "entity state"
+msgid "On"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:50
+msgctxt "entity state"
+msgid "Off"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:51
+msgctxt "entity state"
+msgid "Open"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:52
+msgctxt "entity state"
+msgid "Opening"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:53
+msgctxt "entity state"
+msgid "Closed"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:54
+msgctxt "entity state"
+msgid "Closing"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:55
+msgctxt "entity state"
+msgid "Locked"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:56
+msgctxt "entity state"
+msgid "Unlocked"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:57
+msgctxt "entity state"
+msgid "Locking"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:58
+msgctxt "entity state"
+msgid "Unlocking"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:59
+msgctxt "entity state"
+msgid "Jammed"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:60
+msgctxt "entity state"
+msgid "Playing"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:61
+msgctxt "entity state"
+msgid "Paused"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:62
+msgctxt "entity state"
+msgid "Idle"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:63
+msgctxt "entity state"
+msgid "Standby"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:64
+msgctxt "climate mode"
+msgid "Heating"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:65
+msgctxt "climate mode"
+msgid "Cooling"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:66
+msgctxt "climate mode"
+msgid "Auto"
+msgstr ""
+
+#: package/contents/ui/EntityLogic.qml:74
+msgid "%1 is unavailable in Home Assistant"
+msgstr ""
+
+#: package/contents/ui/EntityRow.qml:73
+msgid "Toggle %1"
+msgstr ""
+
+#: package/contents/ui/EntityRow.qml:86
+msgid "Brightness of %1"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:33
+#: package/contents/ui/main.qml:26
+msgid "Home Assistant"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:51
+#: package/contents/ui/main.qml:99
+msgid "Refresh"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:61
+#: package/contents/ui/FullRepresentation.qml:160
+msgid "Configure…"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:83
+msgid "Connected (live updates)"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:84
+#: package/contents/ui/main.qml:32
+msgid "Connecting…"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:85
+msgid "Live updates unavailable, polling every %1 s"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:87
+#: package/contents/ui/main.qml:34
+msgid "Offline"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:150
+msgid "Not connected to Home Assistant"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:151
+msgid "Access denied"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:152
+msgid "Home Assistant is unreachable"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:153
+msgid "No entities selected"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:154
+msgid "Enter your Home Assistant URL and a long-lived access token."
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:157
+msgid "Choose which entities to show in the widget settings."
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:160
+msgid "Retry"
+msgstr ""
+
+#: package/contents/ui/HaClient.qml:181
+msgid "invalid access token"
+msgstr ""
+
+#: package/contents/ui/HaClient.qml:181
+msgid "Authentication failed: %1"
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:20
+msgid "No Home Assistant URL configured."
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:24
+msgid "No access token configured."
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:44
+msgid "Timed out after %1 seconds connecting to %2."
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:53
+msgid ""
+"Could not reach %1. Check the URL, the network and (for https) the "
+"certificate."
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:58
+msgid "Unauthorized (HTTP %1). The access token is invalid or was revoked."
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:63
+msgid "Not found (HTTP 404). Is %1 really a Home Assistant instance?"
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:71
+msgid "Unexpected response from %1 (not JSON). Is this the Home Assistant URL?"
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:77
+msgid "Home Assistant returned HTTP %1: %2"
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:90
+msgid "Invalid URL: %1"
+msgstr ""
+
+#: package/contents/ui/HaRest.qml:100
+msgid "The server answered, but it does not look like the Home Assistant API."
+msgstr ""
+
+#: package/contents/ui/IconPicker.qml:18
+msgid "Choose Icon"
+msgstr ""
+
+#: package/contents/ui/IconPicker.qml:80
+msgid "System Icon…"
+msgstr ""
+
+#: package/contents/ui/IconPicker.qml:85
+msgid "Image File…"
+msgstr ""
+
+#: package/contents/ui/IconPicker.qml:91
+msgid "Default"
+msgstr ""
+
+#: package/contents/ui/IconPicker.qml:108
+msgid "Choose an Icon Image"
+msgstr ""
+
+#: package/contents/ui/IconPicker.qml:109
+msgid "Images (*.svg *.svgz *.png)"
+msgstr ""
+
+#: package/contents/ui/IconPicker.qml:109
+msgid "All files (*)"
+msgstr ""
+
+#: package/contents/ui/main.qml:29
+msgid "Not configured"
+msgstr ""
+
+#: package/contents/ui/main.qml:31
+msgid "%1 entity"
+msgid_plural "%1 entities"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:33
+msgid "Live updates unavailable, polling"
+msgstr ""
+
+#: package/contents/ui/main.qml:105
+msgid "Open Home Assistant"
+msgstr ""
+
+#: package/contents/ui/Wallet.qml:39
+msgid ""
+"kwallet-query was not found. Install KWallet to store the token securely."
+msgstr ""
+
+#: package/contents/ui/Wallet.qml:40
+msgid "KWallet is disabled in System Settings."
+msgstr ""
+
+#: package/contents/ui/Wallet.qml:41
+msgid "KWallet could not be opened (was the unlock prompt cancelled?)."
+msgstr ""

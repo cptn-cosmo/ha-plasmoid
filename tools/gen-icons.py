@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
+"""Generate the bundled monochrome icons in package/contents/icons.
+
+The icons are single-colour line drawings on a 24x24 grid. Besides the .svg files
+(used for previews and as the applet icon) this writes contents/code/icons.js, from
+which the plasmoid builds SVGs in the current Plasma colour scheme at runtime.
+Run:  python3 tools/gen-icons.py
+"""
+import pathlib
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+OUT = ROOT / "package" / "contents" / "icons"
+JS = ROOT / "package" / "contents" / "code" / "icons.js"
+
+HEAD = ('<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" '
+        'fill="none" stroke="#232629" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">\n')
+TAIL = '</svg>\n'
+DOT = 'fill="#232629" stroke="none"'
+
+ICONS = {
+    # House outline with a small node graph, in the spirit of the Home Assistant logo.
+    "home-assistant": f'''  <path d="M3 11.5 12 3l9 8.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>
+  <path d="M12 21v-9.5M12 16.5l-3.2-3.2M12 14l3.2-3.2"/>
+  <circle cx="12" cy="10.2" r="1.4" {DOT}/>
+  <circle cx="8.3" cy="12.8" r="1.4" {DOT}/>
+  <circle cx="15.7" cy="10.3" r="1.4" {DOT}/>
+''',
+    "ceiling-light": '''  <path d="M12 2v5"/>
+  <path d="M4 15a8 8 0 0 1 16 0z"/>
+  <path d="M9.5 18a2.5 2.5 0 0 0 5 0"/>
+  <path d="M8 7h8"/>
+''',
+    "floor-lamp": '''  <path d="M8 3h8l2.5 7h-13z"/>
+  <path d="M12 10v11"/>
+  <path d="M8 21h8"/>
+''',
+    "desk-lamp": '''  <path d="M5 21h9"/>
+  <path d="M8 21l-1-5 6-6"/>
+  <path d="M13 10l-2.5-2.5"/>
+  <path d="M10.2 7.2 15 2.4l4.6 4.6-4.8 4.8z"/>
+  <path d="M17.3 9.3a3 3 0 0 0 2-1"/>
+''',
+    "bulb": '''  <path d="M9 18h6M10 21h4"/>
+  <path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5.9 1.2.9 2V16h5.2v-.1c0-.8.3-1.5.9-2A6 6 0 0 0 12 3z"/>
+''',
+    "light-strip": '''  <rect x="2.5" y="9" width="19" height="6" rx="1.5"/>
+  <circle cx="6.5" cy="12" r="1" fill="#232629" stroke="none"/>
+  <circle cx="12" cy="12" r="1" fill="#232629" stroke="none"/>
+  <circle cx="17.5" cy="12" r="1" fill="#232629" stroke="none"/>
+  <path d="M6.5 5.5v1.5M12 5.5v1.5M17.5 5.5v1.5M6.5 17v1.5M12 17v1.5M17.5 17v1.5"/>
+''',
+    "switch": '''  <rect x="5" y="3" width="14" height="18" rx="2"/>
+  <rect x="9" y="7" width="6" height="10" rx="1"/>
+  <path d="M9 12h6"/>
+''',
+    "toggle": '''  <rect x="2.5" y="7" width="19" height="10" rx="5"/>
+  <circle cx="16.5" cy="12" r="3" fill="#232629" stroke="none"/>
+''',
+    "plug": '''  <path d="M9 2v5M15 2v5"/>
+  <path d="M6 7h12v4a6 6 0 0 1-12 0z"/>
+  <path d="M12 17v5"/>
+''',
+    "fan": '''  <circle cx="12" cy="12" r="1.8"/>
+  <path d="M12 10.2c-1-3 -.5-6.2 2-7 2.6-.7 3.6 2.4 1.6 4.5-1 1-2.3 1.8-3.6 2.5z"/>
+  <path d="M13.6 12.9c3.1.6 5.6 2.6 5 5.2-.7 2.6-3.9 1.9-4.6-.9-.4-1.4-.4-2.9-.4-4.3z"/>
+  <path d="M10.4 12.9c-2.1 2.4-5.1 3.6-6.9 1.7-1.9-1.9.5-4.1 3.3-3.3 1.4.4 2.6 1 3.6 1.6z"/>
+''',
+    "blinds": '''  <path d="M3 3h18"/>
+  <path d="M4.5 3v10h15V3"/>
+  <path d="M4.5 6.3h15M4.5 9.7h15"/>
+  <path d="M12 13v4"/>
+  <circle cx="12" cy="18.5" r="1.5"/>
+''',
+    "curtains": '''  <path d="M2.5 3h19"/>
+  <path d="M4 3v18c2-1 4-5 5-9-1-3-1.5-6-1.5-9"/>
+  <path d="M20 3v18c-2-1-4-5-5-9 1-3 1.5-6 1.5-9"/>
+''',
+    "tv": '''  <rect x="2.5" y="5" width="19" height="13" rx="1.5"/>
+  <path d="M8 21h8M12 18v3"/>
+  <path d="M9 2l3 3 3-3"/>
+''',
+    "speaker": '''  <rect x="5.5" y="2.5" width="13" height="19" rx="2"/>
+  <circle cx="12" cy="14.5" r="3.5"/>
+  <circle cx="12" cy="7" r="1.2" fill="#232629" stroke="none"/>
+''',
+    "thermostat": '''  <path d="M10 13.5V5a2 2 0 0 1 4 0v8.5a4 4 0 1 1-4 0z"/>
+  <circle cx="12" cy="17" r="1.6" fill="#232629" stroke="none"/>
+  <path d="M12 9v6.5"/>
+  <path d="M17 5h2.5M17 8h2.5M17 11h2.5"/>
+''',
+    "lock": '''  <rect x="5" y="10.5" width="14" height="10.5" rx="2"/>
+  <path d="M8 10.5V7a4 4 0 0 1 8 0v3.5"/>
+  <path d="M12 14.5v2.5"/>
+''',
+    "door": '''  <path d="M5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v17"/>
+  <path d="M3 21h18"/>
+  <circle cx="15.5" cy="12.5" r="1" fill="#232629" stroke="none"/>
+''',
+    "garage": '''  <path d="M2.5 9 12 3.5 21.5 9v12"/>
+  <path d="M2.5 9v12"/>
+  <path d="M6 21v-9.5h12V21"/>
+  <path d="M6 14.5h12M6 17.5h12"/>
+''',
+    "scene": '''  <path d="M12 3l1.9 4.7 4.6 1.8-4.6 1.8L12 16l-1.9-4.7-4.6-1.8 4.6-1.8z"/>
+  <path d="M18.5 15.5l.8 2 2 .8-2 .8-.8 2-.8-2-2-.8 2-.8z"/>
+  <path d="M5.5 15l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4L3.5 17l1.4-.6z"/>
+''',
+    "script": '''  <path d="M6 3h10l3 3v15H6z"/>
+  <path d="M9.5 10l-2 2 2 2M14.5 10l2 2-2 2M12.8 9l-1.6 6"/>
+''',
+    "power": '''  <path d="M12 2.5v9"/>
+  <path d="M7 5.5a8 8 0 1 0 10 0"/>
+''',
+    "sensor": '''  <circle cx="12" cy="12" r="2"/>
+  <path d="M8.2 8.2a5.4 5.4 0 0 0 0 7.6M15.8 8.2a5.4 5.4 0 0 1 0 7.6"/>
+  <path d="M5.3 5.3a9.5 9.5 0 0 0 0 13.4M18.7 5.3a9.5 9.5 0 0 1 0 13.4"/>
+''',
+}
+
+OUT.mkdir(parents=True, exist_ok=True)
+for name, body in ICONS.items():
+    (OUT / f"{name}.svg").write_text(HEAD + body + TAIL)
+import json
+bodies = {name: " ".join(line.strip() for line in body.strip().splitlines()).replace("#232629", "{C}")
+          for name, body in ICONS.items()}
+head = HEAD.strip().replace("#232629", "{C}")
+JS.write_text(
+    "// SPDX-License-Identifier: GPL-3.0-or-later\n"
+    "// Generated by tools/gen-icons.py - do not edit.\n"
+    ".pragma library\n\n"
+    f"var HEAD = {json.dumps(head)};\n"
+    f"var BODIES = {json.dumps(bodies, indent=4)};\n\n"
+    "function has(name) { return BODIES.hasOwnProperty(name); }\n\n"
+    "// data: URL of the bundled icon drawn in the given colour (\"#rrggbb\").\n"
+    "function url(name, color) {\n"
+    "    var body = BODIES[name] || BODIES[\"power\"];\n"
+    "    var svg = (HEAD + body + \"</svg>\").split(\"{C}\").join(color);\n"
+    "    return \"data:image/svg+xml;utf8,\" + encodeURIComponent(svg);\n"
+    "}\n")
+print(f"wrote {len(ICONS)} icons to {OUT} and {JS}")

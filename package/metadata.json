@@ -1,0 +1,26 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "KPlugin": {
+        "Id": "io.github.cptn-cosmo.homeassistant",
+        "Name": "Home Assistant",
+        "Description": "Control Home Assistant lights, switches and more from your panel",
+        "Icon": "go-home",
+        "Category": "System Information",
+        "License": "GPL-3.0-or-later",
+        "Version": "0.1.0",
+        "Website": "https://github.com/cptn-cosmo/ha-plasmoid",
+        "BugReportUrl": "https://github.com/cptn-cosmo/ha-plasmoid/issues",
+        "EnabledByDefault": true,
+        "FormFactors": [
+            "desktop",
+            "tablet"
+        ],
+        "Authors": [
+            {
+                "Name": "cptn-cosmo",
+                "Email": "cosmo@geeks.gay"
+            }
+        ]
+    }
+}

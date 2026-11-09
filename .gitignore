@@ -1,0 +1,16 @@
+# makepkg
+/pkg/
+/src/
+*.pkg.tar.*
+*.tar.gz
+*.tar.zst
+*.src.tar.*
+# built translations / packages
+*.mo
+*.plasmoid
+# editors
+.idea/
+.vscode/
+*.swp
+*~
+__pycache__/
