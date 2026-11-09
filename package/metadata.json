@@ -8,7 +8,7 @@
         "Icon": "go-home",
         "Category": "System Information",
         "License": "GPL-3.0-or-later",
-        "Version": "0.1.0",
+        "Version": "0.1.1",
         "Website": "https://github.com/cptn-cosmo/ha-plasmoid",
         "BugReportUrl": "https://github.com/cptn-cosmo/ha-plasmoid/issues",
         "EnabledByDefault": true,

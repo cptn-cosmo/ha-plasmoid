@@ -2,7 +2,7 @@
 
 pkgname=plasma6-applets-homeassistant
 _pluginid=io.github.cptn-cosmo.homeassistant
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="Plasma 6 widget to control Home Assistant lights, switches and more from the panel"
 arch=('any')
