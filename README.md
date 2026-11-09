@@ -3,10 +3,13 @@
 A KDE Plasma 6 widget (plasmoid) that puts your Home Assistant lights, switches,
 fans, covers and more into the panel or onto the desktop.
 
-> 📸 *Screenshots coming soon.*
-<!-- Add docs/screenshots/panel.png and docs/screenshots/config.png, then:
-![Panel and popup](docs/screenshots/panel.png)
-![Settings](docs/screenshots/config.png) -->
+<p>
+  <img src="docs/screenshots/popup.png" alt="Popup with the full entity list, opened from the panel" width="378">
+  &nbsp;
+  <img src="docs/screenshots/panel.png" alt="Pinned entities as icon buttons in the panel, followed by the chevron" width="255">
+</p>
+
+*Left: the popup with the full list. Right: entities pinned to the panel (shown enlarged), followed by the chevron that opens the popup.*
 
 ## Features
 
