@@ -99,6 +99,8 @@ Tip: the settings page has an **Open Token Page** button that goes straight to
 
 Right-click the widget → *Configure Home Assistant…*
 
+<img src="docs/screenshots/config-connection.png" alt="Connection settings: URL, access token stored in KWallet, Test Connection button, polling interval and scroll step" width="640">
+
 | Setting | Description |
 |---|---|
 | Home Assistant URL | e.g. `http://homeassistant.local:8123` or `https://ha.example.com` |
@@ -116,6 +118,8 @@ Right-click the widget → *Configure Home Assistant…*
   - click the icon to pick a bundled icon, a theme icon or an image file,
   - type a display name (leave empty to use Home Assistant's friendly name),
   - choose the placement: *Panel and list*, *Panel only* or *List only*.
+
+<img src="docs/screenshots/config-entities.png" alt="Entities settings: selected entities with drag handles, icons, names and placement, above the searchable list of available entities filtered by domain" width="640">
 
 ## Usage
 
